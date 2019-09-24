@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using AluguelCarro.Mapeamento;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +19,18 @@ namespace AluguelCarro.Models
         public Contexto(DbContextOptions<Contexto> options)
             : base(options)
         {
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            builder.ApplyConfiguration(new UsuarioMap());
+            builder.ApplyConfiguration(new NivelAcessoMap());
+            builder.ApplyConfiguration(new ContaMap());
+            builder.ApplyConfiguration(new EnderecoMap());
+            builder.ApplyConfiguration(new CarroMap());
+            builder.ApplyConfiguration(new AluguelMap());
         }
     }
 }

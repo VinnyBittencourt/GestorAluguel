@@ -12,6 +12,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using AluguelCarro.Models;
+using AluguelCarro.AcessoDados.Interfaces;
+using AluguelCarro.AcessoDados.Repositorios;
 
 namespace AluguelCarro
 {
@@ -56,6 +58,8 @@ namespace AluguelCarro
                 opcoes.Password.RequiredLength = 6;
                 opcoes.Password.RequiredUniqueChars = 1;
             });
+
+            services.AddScoped<INivelAcessoRepositorio, NivelAcessoRepositorio>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
