@@ -1,7 +1,6 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
 for details on configuring this project to bundle and minify static web assets. */
 body {
-    padding-top: 50px;
     padding-bottom: 20px;
 }
 
@@ -34,4 +33,38 @@ body {
     .carousel-caption {
         display: none;
     }
+}
+
+.conteudoPrincipal{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.titulo {
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+.botoes {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.campos {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+.enderecos, .carros, .dados {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.card-img-top{
+    height: 300px;
+}
+
+.cartoes{
+    padding-bottom: 20px;
 }
